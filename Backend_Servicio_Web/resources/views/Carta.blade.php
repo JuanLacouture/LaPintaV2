@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Pinta - Menú</title>
-    <link rel="icon" href="{{ asset('menu_restaurante/Imagenes/Home/LaPintaLogo.png') }}" type="image/png">
+    <link rel="icon" href="{{ ('http://127.0.0.1:8000/menu_restaurante/Imagenes/Home/LaPintaLogo.png') }}" type="image/png">
     <link rel="stylesheet" href="{{ ('http://127.0.0.1:8000/menu_restaurante/Header&Footer.css') }}">
     <link rel="stylesheet" href="{{ ('http://127.0.0.1:8000/menu_restaurante/CSS/carta.css') }}">
     <link rel="stylesheet" href="{{ ('http://127.0.0.1:8000/menu_restaurante/Scrollers.css') }}">
-    <script src="{{ asset('menu_restaurante/JAVASCRIPT/desplegable.js') }}" defer></script>
-    <script src="{{ asset('menu_restaurante/JAVASCRIPT/Carta.js') }}" defer></script>
+    <script src="{{ ('http://127.0.0.1:8000/menu_restaurante/JAVASCRIPT/desplegable.js') }}" defer></script>
+    <script src="{{ ('http://127.0.0.1:8000/menu_restaurante/JAVASCRIPT/Carta.js') }}" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">

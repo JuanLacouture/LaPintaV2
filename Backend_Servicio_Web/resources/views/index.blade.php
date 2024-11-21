@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Questrial&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ ('http://127.0.0.1:8000/menu_restaurante/styles.css') }}">
-    <link rel="stylesheet" href="{{ asset('menu_restaurante/Header&Footer.css') }}">
-    <link rel="stylesheet" href="{{ asset('menu_restaurante/Scrollers.css') }}">
+    <link rel="stylesheet" href="{{ ('http://127.0.0.1:8000/menu_restaurante/Header&Footer.css') }}">
+    <link rel="stylesheet" href="{{ ('http://127.0.0.1:8000/menu_restaurante/Scrollers.css') }}">
 </head>
 <body>
     <header>

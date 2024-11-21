@@ -6,7 +6,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Formulario de Pago - La Pinta</title>
     <!-- Enlace a la hoja de estilos usando el helper asset() -->
-    <link rel="stylesheet" href="{{ asset('menu_restaurante/CSS/pago.css') }}">
+    <link rel="stylesheet" href="{{  ('http://127.0.0.1:8000/menu_restaurante/CSS/pago.css') }}">
     <!-- Fuentes de Google -->
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">

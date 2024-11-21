@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Questrial&family=Anton&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('gestion_pedidos/CSS/login.css') }}">
+    <link rel="stylesheet" href="{{ ('http://127.0.0.1:8000/gestion_pedidos/CSS/login.css') }}">
 </head>
 <body>
     <a href="{{ route('home') }}" class="back-btn">Atrás</a>

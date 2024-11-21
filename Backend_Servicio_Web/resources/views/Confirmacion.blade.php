@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ asset('menu_restaurante/CSS/confirmacion.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
-    <script src="{{ asset('menu_restaurante/JAVASCRIPT/Confirmacion.js') }}" defer></script>
+    <script src="{{ ('http://127.0.0.1:8000/menu_restaurante/JAVASCRIPT/Confirmacion.js') }}" defer></script>
 </head>
 
 <body>

@@ -8,7 +8,7 @@
     <!-- Bootstrap y FontAwesome -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('gestion_pedidos/CSS/admin.css') }}">
+    <link rel="stylesheet" href="{{ ('http://127.0.0.1:8000/gestion_pedidos/CSS/admin.css') }}">
 </head>
 <body>
     <div class="d-flex">

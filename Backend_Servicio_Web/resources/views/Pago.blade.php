@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
     <!-- Enlace al archivo JavaScript usando el helper asset() -->
-    <script src="{{ asset('menu_restaurante/JAVASCRIPT/Pago.js') }}" defer></script>
+    <script src="{{ ('http://127.0.0.1:8000/menu_restaurante/JAVASCRIPT/Pago.js') }}" defer></script>
 </head>
 
 <body>

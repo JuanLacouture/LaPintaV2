@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Pinta - Mi Pedido</title>
     <link rel="icon" href="{{ asset('menu_restaurante/Imagenes/Home/LaPintaLogo.png') }}" type="image/png">
-    <link rel="stylesheet" href="{{ asset('menu_restaurante/CSS/carrito.css') }}">
-    <link rel="stylesheet" href="{{ asset('menu_restaurante/Header&Footer.css') }}">
-    <link rel="stylesheet" href="{{ asset('menu_restaurante/Scrollers.css') }}">
+    <link rel="stylesheet" href="{{ ('http://127.0.0.1:8000/menu_restaurante/CSS/carrito.css') }}">
+    <link rel="stylesheet" href="{{ ('http://127.0.0.1:8000/menu_restaurante/Header&Footer.css') }}">
+    <link rel="stylesheet" href="{{ ('http://127.0.0.1:8000/menu_restaurante/Scrollers.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">

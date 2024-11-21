@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="{{ ('http://127.0.0.1:8000/menu_restaurante/CSS/Conocenos2.css') }}">
         <link rel="stylesheet" href="{{ ('http://127.0.0.1:8000/menu_restaurante/Header&Footer.css') }}">
         <link rel="stylesheet" href="{{ ('http://127.0.0.1:8000/menu_restaurante/Scrollers.css') }}">
-        <script src="{{ asset('menu_restaurante/JAVASCRIPT/Conocenos2.js') }}" defer></script>
+        <script src="{{ ('http://127.0.0.1:8000/menu_restaurante/JAVASCRIPT/Conocenos2.js') }}" defer></script>
         <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Tropika&display=swap" rel="stylesheet">

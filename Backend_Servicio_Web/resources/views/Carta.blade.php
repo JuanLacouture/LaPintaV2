@@ -148,7 +148,7 @@
         <div id="slider-container">
             <div id="slider-content">
                 <button class="close-btn" onclick="toggleDesplegable()">&times;</button>
-                <iframe src="{{  ('http://127.0.0.1:8000/desplegable') }}" id="desplegable-iframe" frameborder="0"></iframe>
+                <iframe src="{{  (route('desplegable') }}" id="desplegable-iframe" frameborder="0"></iframe>
             </div>
         </div>
     </main>

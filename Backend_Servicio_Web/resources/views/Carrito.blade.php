@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Pinta - Mi Pedido</title>
-    <link rel="icon" href="{{ asset('menu_restaurante/Imagenes/Home/LaPintaLogo.png') }}" type="image/png">
+    <link rel="icon" href="{{ ('http://127.0.0.1:8000/menu_restaurante/Imagenes/Home/LaPintaLogo.png') }}" type="image/png">
     <link rel="stylesheet" href="{{ ('http://127.0.0.1:8000/menu_restaurante/CSS/carrito.css') }}">
     <link rel="stylesheet" href="{{ ('http://127.0.0.1:8000/menu_restaurante/Header&Footer.css') }}">
     <link rel="stylesheet" href="{{ ('http://127.0.0.1:8000/menu_restaurante/Scrollers.css') }}">
@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Questrial&display=swap" rel="stylesheet">
-    <script src="{{ asset('menu_restaurante/JAVASCRIPT/Carrito.js') }}" defer></script>
+    <script src="{{  ('http://127.0.0.1:8000/menu_restaurante/JAVASCRIPT/Carrito.js') }}" defer></script>
 </head>
 <body>
     <header>

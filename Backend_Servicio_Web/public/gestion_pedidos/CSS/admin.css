@@ -120,3 +120,53 @@ body {
     background-color: #d4a373;
     color: #fff;
 }
+
+.d-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.me-2 {
+    margin-right: 0.5rem; /* Espaciado entre elementos */
+}
+
+.me-3 {
+    margin-right: 1rem; /* Mayor espaciado para el siguiente elemento */
+}
+
+/* Ajustar ancho del dropdown (Estado) */
+.form-select {
+    min-width: 120px; /* Reducir el ancho mínimo */
+    width: auto; /* Ajustar dinámicamente según contenido */
+    display: inline-block; /* Asegura que se alineen horizontalmente */
+}
+
+/* Ajustar ancho del filtro por nombre */
+.form-control {
+    min-width: 200px; /* Ajusta el ancho del campo de texto */
+    width: auto; /* Permite que se ajuste dinámicamente */
+    display: inline-block; /* Asegura que se alineen horizontalmente */
+}
+
+/* Contenedor para alinear los filtros */
+.filter-container {
+    display: flex; /* Alineación horizontal */
+    align-items: center; /* Centrar verticalmente */
+    gap: 10px; /* Espaciado uniforme entre los filtros */
+    margin-bottom: 20px; /* Separación del resto del contenido */
+}
+
+/* Estilo del botón de Filtrar */
+.btn-primary {
+    background-color: #3C2E26; /* Color azul para el botón */
+    border: none;
+    font-weight: bold;
+    padding: 5px 15px; /* Ajuste del padding */
+    margin-left: 10px; /* Separación del último filtro */
+}
+
+

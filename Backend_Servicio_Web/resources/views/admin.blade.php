@@ -28,12 +28,19 @@
 
             <!-- Filtro por Estado -->
             <div class="mb-3">
-                <label for="filterEstado" class="form-label">Filtrar por estado:</label>
-                <select id="filterEstado" class="form-select">
-                    <option value="Todos">Todos</option>
-                    <option value="Pendiente">Pendiente</option>
-                    <option value="Atendido">Atendido</option>
-                </select>
+                <!-- Filtro por estado -->
+    <label for="filterEstado" class="form-label me-2">Estado:</label>
+    <select id="filterEstado" class="form-select me-3">
+        <option value="Todos">Todos</option>
+        <option value="Pendiente">Pendiente</option>
+        <option value="Atendido">Atendido</option>
+    </select>
+
+    <label for="filterNombre" class="form-label me-2">Nombre del Cliente:</label>
+    <input type="text" id="filterNombre" class="form-control me-3" placeholder="Buscar por nombre">
+<div id="errorMessage" class="alert alert-danger d-none" role="alert"></div>
+
+    <button id="filterButton" class="btn btn-primary">Filtrar</button>
             </div>
 
             <!-- Tabla de Pedidos -->
@@ -84,11 +91,14 @@
             </div>
         </div>
     </div>
+    
+
+
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-    <script src="{{ asset('Frontend_Gestion_Pedidos/JAVASCRIPT/admin.js') }}"></script>
+    <script src="{{ ('http://127.0.0.1:8000/Frontend_Gestion_Pedidos/JAVASCRIPT/admin.js') }}"></script>
     <script>
         function cambiarEstado(ordenId, nuevoEstado) {
             $.ajax({

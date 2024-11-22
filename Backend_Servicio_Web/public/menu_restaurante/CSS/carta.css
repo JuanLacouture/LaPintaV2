@@ -50,8 +50,8 @@ h1::after {
     position: relative;
     display: flex;
     align-items: center;
-    margin-left: 4.5rem;
-    margin-right: 4.5rem;
+    margin-left: 2.8rem;
+    margin-right: 2.8rem;
 }
 
 .carousel {
@@ -59,7 +59,7 @@ h1::after {
     overflow-x: auto;
     scroll-behavior: smooth;
     margin-bottom: 10px;
-    gap: 50px;
+    gap: 0px; /* Reduce el espacio entre los platos */
     scrollbar-width: none;
     -ms-overflow-style: none; 
     width: 100%;

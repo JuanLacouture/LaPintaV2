@@ -1,15 +1,16 @@
 // Carta.js
 function scrollCarousel(id, distance) {
-  document.getElementById(id).scrollBy({
-    left: distance,
-    behavior: "smooth",
-  });
+    document.getElementById(id).scrollBy({
+        left: distance,
+        behavior: "smooth",
+    });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
   function updateCart(product) {
+    // Asegúrate de que 'name' coincide con lo que usa el carrito
     const existingItem = cart.find((item) => item.name === product.name);
     if (existingItem) {
       existingItem.quantity += 1;

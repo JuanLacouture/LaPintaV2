@@ -69,3 +69,9 @@ Route::get('/css/{filename}', function ($filename) {
 Route::get('/styles', function () {
     return response()->file(public_path("menu_restaurante/styles.css"));
 })->name('styles');
+
+
+Route::post('/guardar-orden', [OrdenController::class, 'guardarOrden'])->name('guardar_orden');
+Route::get('/confirmacion', function () {
+    return view('confirmacion');
+})->name('confirmacion');

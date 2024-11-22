@@ -9,45 +9,45 @@ use Illuminate\Http\Request;
 class OrdenController extends Controller
 {
     public function guardarOrden(Request $request)
-    {
-        try {
-            $validated = $request->validate([
-                'nombre' => 'required|string|max:255',
-                'telefono' => 'required|string|max:20',
-                'email' => 'required|email|max:255',
-                'direccion' => 'required|string|max:255',
-                'productos' => 'required|array',
-                'productos.*.id' => 'required|exists:products,id',
-                'productos.*.cantidad' => 'required|integer|min:1',
-                'productos.*.precio_unitario' => 'required|numeric|min:0',
-                'total' => 'required|numeric|min:0', 
+{
+    try {
+        // Validar los datos del JSON
+        $validated = $request->validate([
+            'nombre' => 'required|string|max:255',
+            'telefono' => 'required|string|max:20',
+            'email' => 'required|email|max:255',
+            'direccion' => 'required|string|max:255',
+            'productos' => 'required|array',
+            'productos.*.id' => 'required|exists:products,id',
+            'productos.*.cantidad' => 'required|integer|min:1',
+            'productos.*.precio_unitario' => 'required|numeric|min:0',
+            'total' => 'required|numeric|min:0'
+        ]);
+
+        // Crear la orden
+        $orden = Orden::create([
+            'nombre' => $validated['nombre'],
+            'telefono' => $validated['telefono'],
+            'email' => $validated['email'],
+            'direccion' => $validated['direccion'],
+            'total' => $validated['total']
+        ]);
+
+        // Asociar los productos a la orden
+        foreach ($validated['productos'] as $producto) {
+            $orden->productos()->attach($producto['id'], [
+                'cantidad' => $producto['cantidad'],
+                'precio_unitario' => $producto['precio_unitario']
             ]);
-
-            // Calcular el total si no es enviado desde el cliente
-            $total = $validated['total'] ?? collect($validated['productos'])->reduce(function ($carry, $producto) {
-                return $carry + ($producto['cantidad'] * $producto['precio_unitario']);
-            }, 0);
-
-            $orden = Orden::create([
-                'nombre' => $validated['nombre'],
-                'telefono' => $validated['telefono'],
-                'email' => $validated['email'],
-                'direccion' => $validated['direccion'],
-                'total' => $validated['total'], 
-            ]);
-            
-            foreach ($validated['productos'] as $producto) {
-                $orden->productos()->attach($producto['id'], [
-                    'cantidad' => $producto['cantidad'],
-                    'precio_unitario' => $producto['precio_unitario'],
-                ]);
-            }
-
-            return response()->json(['message' => 'Orden guardada correctamente.'], 201);
-        } catch (\Exception $e) {
-            return response()->json(['error' => $e->getMessage()], 500);
         }
+
+        return response()->json(['message' => 'Orden guardada correctamente.'], 201);
+    } catch (\Exception $e) {
+        return response()->json(['error' => $e->getMessage()], 500);
     }
+}
+
+
 
     public function admin(Request $request)
 {

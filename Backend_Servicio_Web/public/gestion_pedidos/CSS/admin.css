@@ -162,7 +162,7 @@ body {
 
 /* Estilo del botón de Filtrar */
 .btn-primary {
-    background-color: #3C2E26; /* Color azul para el botón */
+    background-color: #3C2E26; 
     border: none;
     font-weight: bold;
     padding: 5px 15px; /* Ajuste del padding */

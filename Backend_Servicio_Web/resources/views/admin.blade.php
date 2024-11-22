@@ -28,20 +28,25 @@
 
             <!-- Filtro por Estado -->
             <div class="mb-3">
-                <!-- Filtro por estado -->
-    <label for="filterEstado" class="form-label me-2">Estado:</label>
-    <select id="filterEstado" class="form-select me-3">
-        <option value="Todos">Todos</option>
-        <option value="Pendiente">Pendiente</option>
-        <option value="Atendido">Atendido</option>
-    </select>
+    <form method="GET" action="{{ route('admin') }}" class="d-flex align-items-center">
+        <!-- Filtro por estado -->
+        <label for="filterEstado" class="form-label me-2">Estado:</label>
+        <select id="filterEstado" name="estado" class="form-select me-3">
+            <option value="Todos" {{ request('estado') == 'Todos' ? 'selected' : '' }}>Todos</option>
+            <option value="Pendiente" {{ request('estado') == 'Pendiente' ? 'selected' : '' }}>Pendiente</option>
+            <option value="Atendido" {{ request('estado') == 'Atendido' ? 'selected' : '' }}>Atendido</option>
+        </select>
 
-    <label for="filterNombre" class="form-label me-2">Nombre del Cliente:</label>
-    <input type="text" id="filterNombre" class="form-control me-3" placeholder="Buscar por nombre">
-<div id="errorMessage" class="alert alert-danger d-none" role="alert"></div>
+        <!-- Filtro por nombre -->
+        <label for="filterNombre" class="form-label me-2">Nombre del Cliente:</label>
+        <input type="text" id="filterNombre" name="nombre" value="{{ request('nombre') }}" class="form-control me-3" placeholder="Buscar por nombre">
 
-    <button id="filterButton" class="btn btn-primary">Filtrar</button>
-            </div>
+        <!-- Botón de filtrar -->
+        <button type="submit" class="btn btn-primary">Filtrar</button>
+    </form>
+</div>
+
+
 
             <!-- Tabla de Pedidos -->
             <div class="table-responsive">

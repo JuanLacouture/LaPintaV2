@@ -40,11 +40,26 @@ class OrdenController extends Controller
         }
     }
 
-    public function admin()
-    {
-        $ordenes = Orden::with('productos')->get();
-        return view('admin', compact('ordenes'));
+    public function admin(Request $request)
+{
+    $query = Orden::with('productos');
+
+    // Filtro por estado
+    if ($request->filled('estado') && $request->estado !== 'Todos') {
+        $query->where('estado', $request->estado);
     }
+
+    // Filtro por nombre
+    if ($request->filled('nombre')) {
+        $query->where('nombre', 'LIKE', '%' . $request->nombre . '%');
+    }
+
+    // Obtener los resultados
+    $ordenes = $query->get();
+
+    return view('admin', compact('ordenes'));
+}
+
 
     public function cambiarEstado(Request $request, $id)
     {

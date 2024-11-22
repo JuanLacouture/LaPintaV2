@@ -62,7 +62,14 @@ async function enviarPedido() {
         "Content-Type": "application/json", // Cambiar de "text/plain" a "application/json"
         "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').getAttribute("content"), // Token CSRF
       },
-      body: JSON.stringify(orderDetails),
+      body: JSON.stringify({
+        nombre: customerName,
+        telefono: customerPhone,
+        email: customerEmail,
+        direccion: customerAddress,
+        productos: cart,
+        total: total, // Agregar el total calculado
+      }),
     });
     
 

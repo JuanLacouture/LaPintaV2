@@ -20,11 +20,20 @@ class OrdenController extends Controller
                 'productos.*.id' => 'required|exists:products,id',
                 'productos.*.cantidad' => 'required|integer|min:1',
                 'productos.*.precio_unitario' => 'required|numeric|min:0',
-                'total' => $total, 
+                'total' => 'required|numeric|min:0', 
             ]);
 
+            // Calcular el total si no es enviado desde el cliente
+            $total = $validated['total'] ?? collect($validated['productos'])->reduce(function ($carry, $producto) {
+                return $carry + ($producto['cantidad'] * $producto['precio_unitario']);
+            }, 0);
+
             $orden = Orden::create([
-                'total' => $validated['total'], // Usa el total enviado desde el cliente
+                'nombre' => $validated['nombre'],
+                'telefono' => $validated['telefono'],
+                'email' => $validated['email'],
+                'direccion' => $validated['direccion'],
+                'total' => $validated['total'], 
             ]);
             
             foreach ($validated['productos'] as $producto) {
@@ -89,7 +98,7 @@ class OrdenController extends Controller
         }
     }
 
-        public function listarOrdenes()
+    public function listarOrdenes()
     {
         $ordenes = Orden::with('productos')->get();
 

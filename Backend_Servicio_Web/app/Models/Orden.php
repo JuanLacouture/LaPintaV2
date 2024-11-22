@@ -11,7 +11,7 @@ class Orden extends Model
     protected $table = 'ordenes';
 
     // Campos que se pueden llenar
-    protected $fillable = ['nombre', 'telefono', 'email', 'direccion'];
+    protected $fillable = ['nombre', 'telefono', 'email', 'direccion', 'total'];
 
     // Relación con productos
     public function productos()

@@ -65,7 +65,7 @@
         console.log("Enviando datos:", JSON.stringify(orderData));
 
         try {
-            const response = await fetch("{{ route('guardar_orden') }}", {
+            const response = await fetch("{{ ("http://127.0.0.1:8000/guardar-orden") }}", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -80,7 +80,7 @@
 
             alert("¡Pedido enviado correctamente!");
             localStorage.removeItem("cart"); // Limpia el carrito
-            window.location.href = "{{ route('confirmacion') }}";
+            window.location.href = "{{ ("http://127.0.0.1:8000/guardar-orden") }}";
         } catch (error) {
             console.error("Error al enviar el pedido:", error);
             alert("Hubo un problema al enviar el pedido. Por favor, intenta de nuevo.");

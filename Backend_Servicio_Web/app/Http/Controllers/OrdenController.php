@@ -53,6 +53,13 @@ class OrdenController extends Controller
 {
     $query = Orden::with('productos');
 
+    // Formatear productos con cantidad y nombre en una sola cadena
+    foreach ($query as $orden) {
+        $orden->productos_formateados = $orden->productos->map(function ($producto) {
+            return "{$producto->pivot->cantidad} x {$producto->nombre}";
+        })->toArray();
+    }
+
     // Filtro por estado
     if ($request->filled('estado') && $request->estado !== 'Todos') {
         $query->where('estado', $request->estado);

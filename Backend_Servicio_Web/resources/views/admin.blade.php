@@ -73,7 +73,7 @@
                                 <td>
                                     <ul>
                                         @foreach ($orden->productos as $producto)
-                                            <li>{{ $producto->nombre }} x{{ $producto->pivot->cantidad }}</li>
+                                            <li>{{ $producto->name }} x{{ $producto->pivot->cantidad }}</li>
                                         @endforeach
                                     </ul>
                                 </td>
